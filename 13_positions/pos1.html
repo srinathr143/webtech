@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute and relative positions</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .outer{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, red, yellow);
+        }
+        .outer > .inner{
+            width: 600px;
+            height: 600px;
+            background:linear-gradient(to right, rgb(0, 170, 255), white) ;
+            box-shadow: 4px 0 6px black;
+            position: relative;
+        }
+        .inner > .box{
+            height: 80px;
+            width: 80px;
+        }
+        #box1{
+            background-color:rgb(38, 0, 255);
+            /* position: relative;
+            left: 20px; */
+            position: absolute;
+        }
+        #box2{
+            background-color: brown;
+            /* position: relative;
+            bottom: 20px;
+            left: 50px; */
+            position: absolute;
+            left:520px
+        }
+        #box3{
+            background-color: palegreen;
+            /* position: relative;
+            left: 80px;
+            bottom: 40px; */
+            position: absolute;
+            top: 520px;
+        }
+        #box4{
+            background-color: rgb(160, 95, 146);
+            /* position: relative;
+            left: 100px;
+            bottom: 60px; */
+            position: absolute;
+            left: 520px;
+            top: 520px;
+        }
+        #box5{
+            background-color: #00000083;
+            /* position: relative;
+            bottom: 80px;
+            left: 120px; */
+            position: absolute;
+            left:260px;
+            top:260px;
+            border-radius: 50%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+        </div>
+    </div>
+</body>
+</html>
