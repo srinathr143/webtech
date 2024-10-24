@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right , blue, white);
+}
+.outer > .inner{
+    height: 600px;
+    width: 600px;
+    background-color: red;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.outer >.inner > .box{
+    height: 150px;
+    width: 150px;
+    background-color: greenyellow;
+    cursor: pointer;
+    transition: all 2s ;
+}
+.outer> .inner >.box:hover{
+    /* transform:translate(80px,-80px); */
+    /* transform: rotate(360deg); */
+    /* transform: scale(2); */
+    /* transform: skew(180deg); */
+    transform-origin: bottom;
+    transform: rotate(360deg);
+}
