@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 2</title>
+
+    <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            .outer{
+                height: 100vh;
+                background-color: #212121;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap:20px
+            }
+
+            .inner1{
+                height: 400px;
+                width: 400px;
+                border: 2px solid white;
+                border-radius: 50%;
+                animation: rotate 1s linear  infinite ;
+            }
+
+            .inner1 > .box{
+                height: 100px;
+                width: 100px;
+                border: 2px solid white;
+                border-radius: 50%;
+                
+            }
+
+            @keyframes rotate {
+                from{
+
+                    transform: rotate(0);
+
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner1">
+            <div class="box"></div>
+        </div>
+
+        <div class="inner2">
+
+        </div>
+    </div>
+</body>
+</html>

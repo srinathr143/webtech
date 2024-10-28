@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .outer{
+            height: 100vh;
+            background-color: red;
+        }
+        .inner{
+            height: 300px;
+            width: 400px;
+            background-color: green;
+        }
+
+        /* from 0 to 300px it will apply  background color : blue*/
+        @media (max-width:300px){
+            .outer{
+                background-color: blue;
+            }
+        }
+
+        /*   from 300px to 640px  it will apply the normal css (background color : red) */
+
+        /*  640px to 840px it will apply background color black */
+
+        @media (min-width:640px) and (max-width:840px){
+            .outer{
+                background-color: black;
+            }
+            .outer > .inner{
+                width: 500px;
+                background-color: aqua;
+            }
+        }
+
+        /* after 900px it will apply background color aqua  */
+        
+        @media (min-width: 900px)
+        {
+            .outer{
+                background-color: aqua;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+
+        </div>
+    </div>
+</body>
+</html>

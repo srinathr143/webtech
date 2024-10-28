@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resoponsive 3</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .outer{
+            background-color: antiquewhite;
+            height: 100vh;
+        }
+
+        .outer > .inner{
+            height: 600px;
+            width: 90%;
+            border: 2px solid red;
+            display: flex;
+        }
+
+        .inner > .left{
+            flex-basis: 50%;
+            border: 2px solid green;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inner > .right{
+            flex-basis: 50%;
+            border: 2px solid black;
+        }
+
+        .left > .upper{
+            flex-basis: 50%;
+            border: 2px solid blue;
+        }
+        .left > .lower{
+            flex-basis: 50%;
+            border: 2px solid paleturquoise;
+        }
+
+
+        @media (max-width:840px)
+        {
+            .inner{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div class="left">
+
+                <div class="upper">
+
+                    <h1>this is upper-box</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, ad!</p>
+
+                </div>
+
+                <div class="lower">
+
+                    <h1> this is lower-box</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+
+            </div>
+
+            <div class="right">
+
+                <h1>this is right-box</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate aspernatur quas eligendi ipsa corrupti iusto mollitia tempore ratione esse. Corporis natus, nam consequuntur rerum quae quas illum explicabo id hic!</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
